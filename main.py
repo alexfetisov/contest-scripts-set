@@ -1,28 +1,19 @@
 """
-
 python main.py --name fb_b --gcj --tests 1
-
 python tester.py --name fb_b --generate --gcj --test 1
-
-2
-5 7 2
-3 5 1
-
-3
-3
-
 """
 
+# TODO: move all path and settings to .ini file and put to gitignore
 
 import click
 import os
 import shutil
 import subprocess
 
-MAIN_DIR = '/Users/alf/cpp-contests/alf'
-TEMPLATES_DIR = '/Users/alf/dev/mkcnt/templates'
-DEBUG_DIR = '/Users/alf/cpp-contests/cmake-build-debug'
-RELEASE_DIR = '/Users/alf/cpp-contests/cmake-build-release'
+MAIN_DIR = '/Users/alf/acm/alf'
+TEMPLATES_DIR = '/Users/alf/contest-scripts-set/templates'
+DEBUG_DIR = '/Users/alf/acm/cmake-build-debug'
+RELEASE_DIR = '/Users/alf/acm/cmake-build-release'
 
 # REGIONS
 PROBLEM_NAME = "%%PROBLEM_NAME%%"
@@ -92,7 +83,7 @@ def create_gcj_problem(name, path, tests, files):
     makefile = 'CMakeLists.txt'
     main_cpp = 'main_gcj.cpp'
     main_h = 'main_gcj.h'
-    tests_cpp = 'tests.cpp'
+    tests_cpp = 'tests_gcj.cpp'
     for f in [makefile, main_cpp, main_h, tests_cpp]:
         with open(make_path(TEMPLATES_DIR, f), 'r') as inf:
             with open(make_path(TEMPLATES_DIR, 'temp'), 'w') as temp:

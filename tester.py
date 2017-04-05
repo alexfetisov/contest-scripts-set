@@ -3,14 +3,14 @@ import subprocess
 import click
 import shutil
 
-CONTEST_DIR = '/Users/alf/cpp-contests/alf/_'
-ARCHIVE_DIR = '/Users/alf/cpp-contests/alf/archive'
+CONTEST_DIR = '/Users/alf/acm/alf/_'
+ARCHIVE_DIR = '/Users/alf/acm/alf/archive'
 SOURCES = ['codeforces', 'timus', 'opencup', 'atcoder', 'gcj', 'other']
-MAIN_DIR = '/Users/alf/cpp-contests/alf'
+MAIN_DIR = '/Users/alf/acm/alf'
 SUBMIT_DIR = '/Users/alf/submit'
-TEMPLATES_DIR = '/Users/alf/dev/mkcnt/templates'
-DEBUG_DIR = '/Users/alf/cpp-contests/cmake-build-debug'
-RELEASE_DIR = '/Users/alf/cpp-contests/cmake-build-release'
+TEMPLATES_DIR = '/Users/alf/contest-scripts-set/templates'
+DEBUG_DIR = '/Users/alf/acm/cmake-build-debug'
+RELEASE_DIR = '/Users/alf/acm/cmake-build-release'
 PARALLEL_COMMAND = 'parallel --results outdir --bar'
 
 PATH_TO_EXEC_MAIN = './alf/_/{!s}/_{!s}_main'
